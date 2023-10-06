@@ -1,6 +1,9 @@
 # Local snapshot solution
 
 **Stop your node**
+```
+systemctl stop namadad && sudo journalctl -u namadad -f -o cat
+```
 
 ## Saving the snapshot files
 ```
@@ -30,3 +33,6 @@ mv data/ $HOME/.local/share/namada/$CHAIN_ID/cometbft
 ```
   
 **Start your node**
+```
+systemctl restart namadad && sudo journalctl -u namadad -f -o cat
+```
