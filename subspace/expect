@@ -1,8 +1,9 @@
 #!/usr/bin/expect
-echo -e "start expect - ok"
+
+#echo -e "start expect - ok"
 # Установка переменных
-set timeout -1
-echo -e "set timeout - ok"
+#set timeout -1
+#echo -e "set timeout - ok"
 
 # Извлечение значений из переменных окружения
 #set WALLET_ADDRESS [exec env | grep WALLET_ADDRESS | cut -d= -f2]
