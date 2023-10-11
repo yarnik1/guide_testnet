@@ -6,10 +6,6 @@ function colors {
   NORMAL="\e[0m"
 }
 
-function logo {
-  curl -s https://raw.githubusercontent.com/DOUBLE-TOP/tools/main/doubletop.sh | bash
-}
-
 function line {
   echo -e "\e[39m##############################################################################\e[0m"
 }
