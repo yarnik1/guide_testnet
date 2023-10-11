@@ -1,6 +1,5 @@
 #!/usr/bin/expect
 
-#echo -e "start expect - ok"
 # Установка переменных
 #set timeout -1
 #echo -e "set timeout - ok"
