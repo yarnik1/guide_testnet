@@ -62,7 +62,7 @@ function read_wallet {
 
 function init_expect {
     sudo rm -rf $HOME/.config/pulsar
-    expect <(curl -s https://raw.githubusercontent.com/yarnik1/nodes_testnet/subspace/expect)
+    expect <(curl -s https://raw.githubusercontent.com/yarnik1/nodes_testnet/main/subspace/expect)
 }
 
 function systemd {
