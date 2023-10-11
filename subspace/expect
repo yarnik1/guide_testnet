@@ -11,16 +11,16 @@
 #echo -e "env grep - ok"
 
 # Проверка, установлены ли переменные
-if { $WALLET_ADDRESS == "" } {
-    puts "Ошибка: WALLET_ADDRESS не установлена"
-    exit 1
-}
-echo -e "WALLET_ADDRESS - ok"
+#if { $WALLET_ADDRESS == "" } {
+#    puts "Ошибка: WALLET_ADDRESS не установлена"
+#    exit 1
+#}
+#echo -e "WALLET_ADDRESS - ok"
 
-if { $SUBSPACE_NODENAME == "" } {
-    puts "Ошибка: SUBSPACE_NODENAME не установлена"
-    exit 1
-}
+#if { $SUBSPACE_NODENAME == "" } {
+#    puts "Ошибка: SUBSPACE_NODENAME не установлена"
+#    exit 1
+#}
 #echo -e "SUBSPACE_NODENAME - ok"
 
 # Запуск команды
