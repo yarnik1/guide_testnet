@@ -37,10 +37,13 @@ function wget_pulsar {
   fi
   wget -O pulsar $URL
   sudo chmod +x pulsar
+  echo -e "sudo chmod +x pulsar - ok"
   sudo mv pulsar /usr/local/bin/
+  echo -e "sudo mv pulsar /usr/local/bin/ - ok"
 }
 
 function read_nodename {
+  SUBSPACE_NODENAME=WellNode
   if [ ! $SUBSPACE_NODENAME ]; then
   echo -e "Enter your node name(random name for telemetry)"
   line
@@ -51,6 +54,7 @@ function read_nodename {
 }
 
 function read_wallet {
+  WALLET_ADDRESS=stC2C46EFLtcdvPLL74KsRtSkEPMq4LExnRTL2vtc38rPsvr3
   if [ ! $WALLET_ADDRESS ]; then
   echo -e "Enter your polkadot.js extension address"
   line
@@ -62,6 +66,7 @@ function read_wallet {
 
 function init_expect {
     sudo rm -rf $HOME/.config/pulsar
+    echo -e "sudo rm -rf $HOME/.config/pulsar - ok"
     expect <(curl -s https://raw.githubusercontent.com/yarnik1/nodes_testnet/main/subspace/expect)
 }
 
