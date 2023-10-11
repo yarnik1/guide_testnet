@@ -5,9 +5,9 @@ set timeout -1
 echo -e "set timeout - ok"
 
 # Извлечение значений из переменных окружения
-set WALLET_ADDRESS [exec env | grep WALLET_ADDRESS | cut -d= -f2]
-set SUBSPACE_NODENAME [exec env | grep SUBSPACE_NODENAME | cut -d= -f2]
-echo -e "env grep - ok"
+#set WALLET_ADDRESS [exec env | grep WALLET_ADDRESS | cut -d= -f2]
+#set SUBSPACE_NODENAME [exec env | grep SUBSPACE_NODENAME | cut -d= -f2]
+#echo -e "env grep - ok"
 
 # Проверка, установлены ли переменные
 if { $WALLET_ADDRESS == "" } {
