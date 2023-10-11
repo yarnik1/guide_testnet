@@ -63,7 +63,7 @@ function read_wallet {
 function init_expect {
     sudo rm -rf $HOME/.config/pulsar
     echo -e "sudo rm -rf $HOME/.config/pulsar - ok"
-    expect <(curl -s https://raw.githubusercontent.com/yarnik1/nodes_testnet/main/subspace/expect)
+    expect <(curl -s https://raw.githubusercontent.com/yarnik1/nodes_testnet/main/subspace/subspace_install_expect.sh)
 }
 
 function systemd {
