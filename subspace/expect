@@ -20,31 +20,31 @@ if { $SUBSPACE_NODENAME == "" } {
     puts "Ошибка: SUBSPACE_NODENAME не установлена"
     exit 1
 }
-echo -e "SUBSPACE_NODENAME - ok"
+#echo -e "SUBSPACE_NODENAME - ok"
 
 # Запуск команды
-spawn /usr/local/bin/pulsar init
+#spawn /usr/local/bin/pulsar init
 
 # Ответы на вопросы
-expect "*farmer/reward address*"
-send "y\r"
+#expect "*farmer/reward address*"
+#send "y\r"
 
-expect "*your farmer/reward address:*"
-send "$WALLET_ADDRESS\r"
+#expect "*your farmer/reward address:*"
+#send "$WALLET_ADDRESS\r"
 
-expect "*Enter your node name to be identified*"
-send "$SUBSPACE_NODENAME\r"
+#expect "*Enter your node name to be identified*"
+#send "$SUBSPACE_NODENAME\r"
 
-expect "*path for storing farm files*"
-send "\r"
+#expect "*path for storing farm files*"
+#send "\r"
 
-expect "*path for storing node files*"
-send "\r"
+#expect "*path for storing node files*"
+#send "\r"
 
-expect "*farm size*"
-send "250.0 GB\r"
+#expect "*farm size*"
+#send "250.0 GB\r"
 
-expect "*Specify the chain to farm*"
-send "Gemini3f\r"
+#expect "*Specify the chain to farm*"
+#send "Gemini3f\r"
 
 expect eof
