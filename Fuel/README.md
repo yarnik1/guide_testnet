@@ -1,4 +1,5 @@
 # Fuel Beta-5 Setup // Testnet — Beta-5
+https://docs.fuel.network/guides/running-a-node/running-a-testnet-node/
 
 ### Install rust
 ~~~
