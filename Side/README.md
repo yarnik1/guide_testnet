@@ -26,9 +26,8 @@ cd sidechain
 git checkout 0.0.1-75-gbd63479
 make install
 ~~~
-
 ~~~
-sided version --long | grep -e commit -e version
+sided version
 ~~~
 
 ### init
@@ -38,14 +37,19 @@ $TIKER config keyring-backend test
 ```
 
 ### Create wallet
-```sided keys add wallet```
+~~~
+sided keys add wallet
+~~~
 
 ### Download Genesis && addrbook
-```wget -O $HOME/.sidechain/config/genesis.json https://raw.githubusercontent.com/sideprotocol/testnet/main/shambhala/genesis.json 
-wget -O $HOME/.sidechain/config/addrbook.json https://raw.githubusercontent.com/obajay/nodes-Guides/main/Projects/Side_Protocol/addrbook.json```
+~~~
+wget -O $HOME/.sidechain/config/genesis.json https://raw.githubusercontent.com/sideprotocol/testnet/main/shambhala/genesis.json 
+wget -O $HOME/.sidechain/config/addrbook.json https://raw.githubusercontent.com/obajay/nodes-Guides/main/Projects/Side_Protocol/addrbook.json
+~~~
 
 ### Create a service file
-```sudo tee /etc/systemd/system/sided.service > /dev/null <<EOF
+~~~
+sudo tee /etc/systemd/system/sided.service > /dev/null <<EOF
 [Unit]
 Description=sided
 After=network-online.target
@@ -59,11 +63,13 @@ LimitNOFILE=65535
 
 [Install]
 WantedBy=multi-user.target
-EOF```
-
-~~~sudo systemctl daemon-reload
+EOF
+~~~~
+~~~
+sudo systemctl daemon-reload
 sudo systemctl enable sided
 sudo systemctl restart sided && sudo journalctl -u sided -f -o cat
+~~~
 
 
 
