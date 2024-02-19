@@ -73,7 +73,18 @@ sudo systemctl restart sided && sudo journalctl -u sided -f -o cat
 
 ### Create validator
 ~~~
-$TIKER tx staking create-validator --moniker "WellNode 🦁" --identity "1B7C4191E48B1F4C" --website="https://wellnode.net/" --commission-max-change-rate "1" --commission-max-rate "1" --commission-rate "0.05" --min-self-delegation "1" --pubkey  $($TIKER tendermint show-validator) --amount 1000000$TOKEN --from walletYarNik-1 --gas auto -y --fees=1750uside --chain-id side-testnet-1
+$TIKER tx staking create-validator \
+--moniker "WellNode" \
+--commission-max-change-rate "1" \
+--commission-max-rate "1" \
+--commission-rate "0.05" \
+--min-self-delegation "1" \
+--pubkey  $($TIKER tendermint show-validator) \
+--amount 1000000$TOKEN \
+--from walletYarNik-1 \
+--fees=1750uside \
+--chain-id side-testnet-1 \
+--gas auto -y
 ~~~
 
 
