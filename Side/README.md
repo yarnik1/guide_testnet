@@ -2,7 +2,9 @@
 
 Ubuntu 22.04.3 LTS
 
-~~~TIKER=sided~~~
+~~~
+TIKER=sided
+~~~
 
 ### Install GO
 ~~~
