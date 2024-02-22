@@ -18,12 +18,12 @@ source $HOME/.bash_profile
 go version
 ~~~
 
-### Build 18.02.24
+### Build 20.02.24
 ~~~
 cd $HOME && mkdir -p go/bin/
-git clone -b dev https://github.com/sideprotocol/sidechain.git
-cd sidechain
-git checkout 0.0.1-75-gbd63479
+#git clone -b dev https://github.com/sideprotocol/sidechain.git
+git clone https://github.com/sideprotocol/side.git
+cd side
 make install
 ~~~
 ~~~
@@ -31,7 +31,7 @@ sided version
 ~~~
 
 ### init
-```sided init WellNode --chain-id side-testnet-1
+```sided init WellNode --chain-id side-testnet-2
 sided config chain-id side-testnet-1
 $TIKER config keyring-backend test
 ```
@@ -43,8 +43,8 @@ sided keys add wallet
 
 ### Download Genesis && addrbook
 ~~~
-wget -O $HOME/.sidechain/config/genesis.json https://raw.githubusercontent.com/sideprotocol/testnet/main/shambhala/genesis.json 
-wget -O $HOME/.sidechain/config/addrbook.json https://raw.githubusercontent.com/obajay/nodes-Guides/main/Projects/Side_Protocol/addrbook.json
+wget https://raw.githubusercontent.com/sideprotocol/testnet/main/side-testnet-2/genesis.json -O $HOME/.side/config/genesis.json
+wget -O $HOME/.side/config/addrbook.json "https://raw.githubusercontent.com/obajay/nodes-Guides/main/Projects/Side_Protocol/addrbook.json"
 ~~~
 
 ### Create a service file
